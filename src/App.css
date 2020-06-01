@@ -23,6 +23,11 @@
 }
 
 @media(max-width: 500px){
+    .display{
+        display: block;
+        width: 100%;
+    }
+    
     .textfield{
         margin-right: 0;
     }

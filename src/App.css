@@ -1,34 +1,31 @@
-.display{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    
-    
-
+.display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
-.flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 15vh;
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 15vh;
 }
 
 .textfield {
-    margin-right: 5rem;
+  margin-right: 5rem;
 }
-.icon{
-    margin-left: 5rem;
+.icon {
+  margin-left: 5rem;
 }
 
-@media(max-width: 500px){
-    .display{
-        display: block;
-        width: 100%;
-    }
-    
-    .textfield{
-        margin-right: 0;
-    }
+@media (max-width: 500px) {
+  .display {
+    display: block;
+    width: 100%;
+  }
+
+  .textfield {
+    margin-right: 0;
+  }
 }

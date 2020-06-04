@@ -31,8 +31,8 @@ const VideoList = () => {
       });
   }, [searchClick, select]);
 
-  const applicationConsumerId = "cbthUPvvXomxCestnBVQHuaKKTfq1RTh";
-  const applicationConsumerSecret = "Srgi6bMuwJDducdK";
+  const applicationConsumerId = `${process.env.REACT_APP_CONSUMER_ID}`;
+  const applicationConsumerSecret = `${process.env.REACT_APP_CONSUMER_SECRET}`;
   sstk.setBasicAuth(applicationConsumerId, applicationConsumerSecret);
   const videosApi = new sstk.VideosApi();
 

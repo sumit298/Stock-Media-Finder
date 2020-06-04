@@ -35,7 +35,7 @@ function Search(props) {
           value={props.search}
           onChange={props.SearchHandle}
           style={{ margin: 24 }}
-          placeholder="Search for Images"
+          placeholder="Search for Media"
           
           InputLabelProps={{
             shrink: true,
@@ -59,6 +59,7 @@ function Search(props) {
           <MenuItem value={10}>10</MenuItem>
           <MenuItem value={30}>30</MenuItem>
           <MenuItem value={50}>50</MenuItem>
+          <MenuItem value={100}>100</MenuItem>
         </Select>
         </div>
       </div>

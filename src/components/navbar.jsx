@@ -9,7 +9,7 @@ const Navbar = () => {
     <div>
       <AppBar position="static" color="secondary">
         <Toolbar className="flex">
-          <Typography className="size" variant="h6">Stock Image Finder</Typography>
+          <Typography className="size" variant="h6">Stock Media Finder</Typography>
           <div className="navs">
           <Link className="links" to="/">
           <Typography variant="h6">Images</Typography>

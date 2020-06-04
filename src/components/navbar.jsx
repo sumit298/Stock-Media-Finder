@@ -9,13 +9,15 @@ const Navbar = () => {
     <div>
       <AppBar position="static" color="secondary">
         <Toolbar className="flex">
-          <Typography variant="h6">Stock Image Finder</Typography>
-          <Link to="/">
-          <Typography variant="h6">Image</Typography>
+          <Typography className="size" variant="h6">Stock Image Finder</Typography>
+          <div className="navs">
+          <Link className="links" to="/">
+          <Typography variant="h6">Images</Typography>
           </Link>
-          <Link to="/videos">
-          <Typography variant="h6">Video</Typography>
+          <Link className="links size" to="/videos">
+          <Typography variant="h6">Videos</Typography>
           </Link>
+          </div>
         </Toolbar>
       </AppBar>
     </div>

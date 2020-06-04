@@ -10,6 +10,19 @@
   justify-content: space-between;
   align-items: center;
   min-height: 15vh;
+  flex-wrap: wrap;
+  /* margin-top: 10px; */
+}
+
+.navs{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px;
+
 }
 
 .textfield {
@@ -17,6 +30,12 @@
 }
 .icon {
   margin-left: 5rem;
+}
+
+.links{
+  text-decoration: none;
+  color: #f4f4f4;
+  /* cursor: pointer; */
 }
 
 @media (max-width: 500px) {
@@ -27,5 +46,20 @@
 
   .textfield {
     margin-right: 0;
+  }
+
+  .flex{
+    text-align: center;
+  }
+
+  .navs{
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .size{
+    margin-left: 10px;
   }
 }

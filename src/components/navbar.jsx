@@ -16,6 +16,7 @@ const Navbar = () => {
           </Link>
           <Link className="links size" to="/videos">
           <Typography variant="h6">Videos</Typography>
+
           </Link>
           </div>
         </Toolbar>

@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/navbar";
 import ImageList from "./components/imageList";
 import "./App.css";
-import VideoList from "./components/videolist";
+import PixabayVideoList from "./components/pixabayVideoList";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Navbar />
        
         <Route path="/videos">
-          <VideoList/>;
+          <PixabayVideoList/>;
         </Route>
         <Route path="/" exact>
           <ImageList/>

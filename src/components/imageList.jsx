@@ -35,7 +35,7 @@ const ImageList = () => {
       setImages(data.hits);
     };
     getPhotos();
-  }, [search, select]);
+  }, [searchClick, select]);
 
   return (
     <div>

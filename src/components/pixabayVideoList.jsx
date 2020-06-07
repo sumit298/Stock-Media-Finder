@@ -28,11 +28,11 @@ const PixabayVideoList = () => {
         `${api}?key=${apiKey}&q=${search}&per_page=${select}`
       );
       const data = await response.json();
-      console.log(data.hits);
+      // console.log(data.hits);
       setVideos(data.hits);
     };
     getVidoes();
-  }, [search, select]);
+  }, [searchClick, select]);
   return (
     <div>
       <Search

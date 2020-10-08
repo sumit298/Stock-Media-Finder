@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import PixabayVideo from './pixabayVideos'
 import Search from "./search";
@@ -19,6 +20,14 @@ const PixabayVideoList = () => {
   const onSelectChange = (e) => {
     setSelect(e.target.value);
   };
+
+  const onKeyPressHandle = (e)=>{
+    if (e.charCode === 13) {
+      e.preventDefault();
+      // console.log("I am clicked");
+      onClickSearchTextChange();
+    }
+  }
 
   useEffect(() => {
     const getVidoes = async () => {
@@ -42,6 +51,7 @@ const PixabayVideoList = () => {
         SearchHandle={onSearchTextChange}
         clickSearch={searchClick}
         clickSearchFunction={onClickSearchTextChange}
+        onKeyPressHandle={onKeyPressHandle}
       />
       <div className="display">
         {videos.map((item) => {

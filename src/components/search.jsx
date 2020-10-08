@@ -21,6 +21,7 @@ function Search(props) {
     },
   }));
   const classes = useStyles();
+  // console.log(props.onKeyPressHandle);
 
   return (
     <div>
@@ -30,6 +31,7 @@ function Search(props) {
             id="standard-full-width"
             name="searchText"
             value={props.search}
+            onKeyPress={props.onKeyPressHandle}
             onChange={props.SearchHandle}
             style={{ margin: 24 }}
             placeholder="Search for Media"
@@ -38,6 +40,7 @@ function Search(props) {
             }}
           ></TextField>
           <Button
+           
             onClick={props.clickSearchFunction}
             variant="contained"
             color="secondary"

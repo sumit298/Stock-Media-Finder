@@ -75,7 +75,7 @@ export default function PixabayVideo({ item }) {
             titlePosition="bottom"
             actionIcon={
               <IconButton
-                onClick={() => handleClickOpen(item.videos.medium.url)}
+                onClick={() => handleClickOpen(item.videos.large.url)}
                 className={classes.icon}
               >
                 <ZoomOutMapIcon />

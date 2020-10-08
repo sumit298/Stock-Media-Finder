@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import Video from "./video";
 import Search from "./search";
@@ -11,6 +12,8 @@ const VideoList = () => {
   const onSearchTextChange = (e) => {
     setSearch(e.target.value);
   };
+  
+  
 
   const onClickSearchTextChange = () => {
     setSearchClick(search);
@@ -18,6 +21,13 @@ const VideoList = () => {
   const onSelectChange = (e) => {
     setSelect(e.target.value);
   };
+  const onKeyPressHandle = (e)=>{
+    if (e.charCode === 13) {
+      e.preventDefault();
+      // console.log("I am clicked");
+      onClickSearchTextChange();
+    }
+  }
 
   useEffect(() => {
     videosApi
@@ -51,6 +61,7 @@ const VideoList = () => {
         SearchHandle={onSearchTextChange}
         clickSearch={searchClick}
         clickSearchFunction={onClickSearchTextChange}
+        onKeyPressHandle={onKeyPressHandle}
       />
       <div className="display">
         {videos.map((item) => {

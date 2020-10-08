@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import Image from "./image";
 import Search from "./search";
@@ -17,11 +18,20 @@ const ImageList = () => {
   };
 
   const onClickSearchTextChange = () => {
+    
     setSearchClick(search);
   };
   const onSelectChange = (e) => {
     setSelect(e.target.value);
   };
+
+  const onKeyPressHandle = (e)=>{
+    if (e.charCode === 13) {
+      e.preventDefault();
+      // console.log("I am clicked");
+      onClickSearchTextChange();
+    }
+  }
 
   useEffect(() => {
     const getPhotos = async () => {
@@ -46,6 +56,7 @@ const ImageList = () => {
         SearchHandle={onSearchTextChange}
         clickSearch={searchClick}
         clickSearchFunction={onClickSearchTextChange}
+        onKeyPressHandle={onKeyPressHandle}
       />
       <div className="display">
         {images.map((item) => {

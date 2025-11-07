@@ -4,24 +4,21 @@ import ImageList from "./components/imageList";
 import "./App.css";
 import PixabayVideoList from "./components/pixabayVideoList";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { CustomThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
-  
- 
   return (
-    <div>
+    <CustomThemeProvider>
       <Router>
         <Navbar />
-       
         <Route path="/videos">
-          <PixabayVideoList/>;
+          <PixabayVideoList/>
         </Route>
         <Route path="/" exact>
           <ImageList/>
-        </Route> 
-       
+        </Route>
       </Router>
-    </div>
+    </CustomThemeProvider>
   );
 }
 

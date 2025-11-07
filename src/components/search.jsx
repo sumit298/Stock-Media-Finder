@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Button from "@material-ui/core/Button";
-import { Typography, FormControl, InputLabel } from "@material-ui/core";
+import { FormControl, InputLabel } from "@material-ui/core";
 
 // Sanitize user input to prevent XSS
 const sanitizeInput = (input) => {
